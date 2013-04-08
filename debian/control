@@ -1,0 +1,21 @@
+Source: getty-ttygs0-run
+Section: admin
+Priority: extra
+Maintainer: Ryan Kuester <rkuester@insymbols.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Vcs-Git: http://git.pragmatux.org/getty-ttygs0-run.git
+Vcs-Browser: http://git.pragmatux.org/getty-ttygs0-run.git
+
+Package: getty-ttygs0-run
+Architecture: all
+Depends: systemd, ${misc:Depends}
+Description: Run getty on ttyGS0
+ This package delivers systemd unit files (just a symlink, actually)
+ which causes a serial getty to be run on ttyGS0, the serial USB gadget
+ serial tty.
+ .
+ You might expect such a getty to be run by a console= kernel command
+ line parameter; however, the serial gadget does not currently work as
+ a console, and thus will not be discovered by systemd's getty
+ generator.

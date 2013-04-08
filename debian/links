@@ -1,0 +1,1 @@
+lib/systemd/system/serial-getty@.service etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service
